@@ -1,0 +1,16 @@
+
+# install docker: https://docs.docker.com/get-docker/
+$ docker --version
+Docker version 20.10.2, build 2291f61
+
+# install minikube: https://minikube.sigs.k8s.io/docs/start/
+$ minikube version
+minikube version: v1.16.0
+
+$ minikube start
+...
+...
+
+$ kubectl get nodes
+NAME       STATUS   ROLES                  AGE    VERSION
+minikube   Ready    control-plane,master   2m8s   v1.20.0

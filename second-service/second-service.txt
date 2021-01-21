@@ -1,0 +1,45 @@
+BUILDING OUR OWN SERVICE
+We can ofc run our own build Docker images in k8s. Normally k8s is 
+configured with a private docker registry to pull images from when 
+creating deployments.
+In our case we will shortcut this process and have docker put images 
+into minikube's local image registry.
+
+
+The following command prints the docker environment needed to put 
+images into minikube's registry:
+$ minikube docker-env
+...so to set those variable we can run
+$ eval $(minikube docker-env)
+
+Now when we build docker images they will be available to minikube!
+
+
+
+$ cd second-service/
+$ docker build -t helloworld:v1 .
+
+$ kubectl apply -f helloworld-deployment.yaml
+$ kubectl get pods
+
+$ kubectl apply -f helloworld-service.yaml
+$ kubectl get services
+
+$ curl http://127.0.0.1:8080/
+
+Get stdout from a pod:
+$ kubectl logs <podname>
+
+
+
+
+
+
+Add request logs to helloworld.go
+Build new docker image (with new tag!):
+$ docker build -t helloworld:v1 .
+
+Update deployment.
+Apply the updated deployment.
+
+$ curl http://127.0.0.1:8080/

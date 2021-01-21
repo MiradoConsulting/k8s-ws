@@ -1,0 +1,47 @@
+In short, k8s is a framework for deploying servers and it comes with 
+lots of tooling that is needed to maintain services.
+
+Wikipedia: 
+Kubernetes (commonly known as k8s) is an open-source container-
+orchestration system for automating computer application deployment, 
+scaling, and management.
+Container in this context is a OS-level virtualization in which the 
+kernel allows the existence of multiple isolated user space instances. 
+Orchestration refers to aligning the business request with applications, 
+data, and infrastructure.
+
+https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
+
+
+
+
+
+
+What does it do?
+(from https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
+- Service discovery and load balancing
+- Storage orchestration
+- Automated rollouts and rollbacks
+- Automatic bin packing
+- Self-healing
+- Secret and configuration management
+
+
+
+
+
+
+K8s components
+https://kubernetes.io/docs/concepts/overview/components/
+Pods are missing from the picture..
+
+
+
+
+
+
+
+Typical architecture for k8s based apps on AWS
+https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2018/11/20/image1-1.png
+
+
